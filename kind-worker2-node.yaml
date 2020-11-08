@@ -1,0 +1,241 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2020-10-28T18:45:26Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: kind-worker2
+    kubernetes.io/os: linux
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:node.alpha.kubernetes.io/ttl: {}
+        f:labels:
+          f:beta.kubernetes.io/arch: {}
+          f:beta.kubernetes.io/os: {}
+      f:spec:
+        f:podCIDR: {}
+        f:podCIDRs:
+          .: {}
+          v:"10.244.1.0/24": {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-10-28T18:45:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubeadm.alpha.kubernetes.io/cri-socket: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-10-28T18:45:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:volumes.kubernetes.io/controller-managed-attach-detach: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/arch: {}
+          f:kubernetes.io/hostname: {}
+          f:kubernetes.io/os: {}
+      f:spec:
+        f:providerID: {}
+      f:status:
+        f:addresses:
+          .: {}
+          k:{"type":"Hostname"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+          k:{"type":"InternalIP"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+        f:allocatable:
+          .: {}
+          f:cpu: {}
+          f:ephemeral-storage: {}
+          f:hugepages-1Gi: {}
+          f:hugepages-2Mi: {}
+          f:memory: {}
+          f:pods: {}
+        f:capacity:
+          .: {}
+          f:cpu: {}
+          f:ephemeral-storage: {}
+          f:hugepages-1Gi: {}
+          f:hugepages-2Mi: {}
+          f:memory: {}
+          f:pods: {}
+        f:conditions:
+          .: {}
+          k:{"type":"DiskPressure"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"MemoryPressure"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PIDPressure"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:daemonEndpoints:
+          f:kubeletEndpoint:
+            f:Port: {}
+        f:images: {}
+        f:nodeInfo:
+          f:architecture: {}
+          f:bootID: {}
+          f:containerRuntimeVersion: {}
+          f:kernelVersion: {}
+          f:kubeProxyVersion: {}
+          f:kubeletVersion: {}
+          f:machineID: {}
+          f:operatingSystem: {}
+          f:osImage: {}
+          f:systemUUID: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-10-29T10:32:31Z"
+  name: kind-worker2
+  resourceVersion: "170502"
+  selfLink: /api/v1/nodes/kind-worker2
+  uid: 922687c3-3503-4c5f-9b2c-a28ca22fdf1d
+spec:
+  podCIDR: 10.244.1.0/24
+  podCIDRs:
+  - 10.244.1.0/24
+  providerID: kind://docker/kind/kind-worker2
+status:
+  addresses:
+  - address: 172.25.3.5
+    type: InternalIP
+  - address: kind-worker2
+    type: Hostname
+  allocatable:
+    cpu: "2"
+    ephemeral-storage: 30309264Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 8152836Ki
+    pods: "110"
+  capacity:
+    cpu: "2"
+    ephemeral-storage: 30309264Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 8152836Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2020-10-29T10:32:31Z"
+    lastTransitionTime: "2020-10-28T18:45:26Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2020-10-29T10:32:31Z"
+    lastTransitionTime: "2020-10-28T18:45:26Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2020-10-29T10:32:31Z"
+    lastTransitionTime: "2020-10-28T18:45:26Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2020-10-29T10:32:31Z"
+    lastTransitionTime: "2020-10-28T18:46:47Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - docker.io/luksa/kubia@sha256:3f28e304dc0f63dc30f273a4202096f0fa0d08510bd2ee7e1032ce600616de24
+    - docker.io/luksa/kubia:latest
+    sizeBytes: 259048246
+  - names:
+    - k8s.gcr.io/etcd:3.4.13-0
+    sizeBytes: 254659261
+  - names:
+    - k8s.gcr.io/kube-proxy:v1.19.1
+    sizeBytes: 135907926
+  - names:
+    - docker.io/kindest/kindnetd:v20200725-4d6bea59
+    sizeBytes: 118720874
+  - names:
+    - k8s.gcr.io/kube-apiserver:v1.19.1
+    sizeBytes: 95011120
+  - names:
+    - k8s.gcr.io/kube-controller-manager:v1.19.1
+    sizeBytes: 84149058
+  - names:
+    - k8s.gcr.io/kube-scheduler:v1.19.1
+    sizeBytes: 65056560
+  - names:
+    - k8s.gcr.io/build-image/debian-base:v2.1.0
+    sizeBytes: 53876619
+  - names:
+    - k8s.gcr.io/coredns:1.7.0
+    sizeBytes: 45355487
+  - names:
+    - docker.io/rancher/local-path-provisioner:v0.0.14
+    sizeBytes: 41982521
+  - names:
+    - k8s.gcr.io/pause:3.3
+    sizeBytes: 685708
+  - names:
+    - docker.io/luksa/ssd-monitor@sha256:79be3e18ba8f61aed3e34d04738f2f49cf9ef34b044daca3c530f6119421a521
+    - docker.io/luksa/ssd-monitor:latest
+    sizeBytes: 679954
+  nodeInfo:
+    architecture: amd64
+    bootID: 9fe60f51-009c-498e-bf58-18cf97bbb2ef
+    containerRuntimeVersion: containerd://1.4.0
+    kernelVersion: 5.4.0-1031-azure
+    kubeProxyVersion: v1.19.1
+    kubeletVersion: v1.19.1
+    machineID: 0f29c7c6ef154792b97c867c3b67ac73
+    operatingSystem: linux
+    osImage: Ubuntu Groovy Gorilla (development branch)
+    systemUUID: 52663e04-d436-421b-8e7e-f2a995f14100

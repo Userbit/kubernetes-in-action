@@ -5,7 +5,8 @@ metadata:
 spec:
   containers:
   - image: luksa/fortune:args
-    args: ["2"]
+    args: #["2"]
+    - "2"
     name: html-generator
     volumeMounts:
     - name: html

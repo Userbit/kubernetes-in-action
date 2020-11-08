@@ -1,14 +1,14 @@
 const http = require('http');
 const os = require('os');
 
-console.log("Kubia server starting...");
+console.log("Kubia:v2-8081 server starting...");
 
 var handler = function(request, response) {
-  console.log("Received request from " + request.connection.remoteAddress);
+  console.log("Kubia:v2-8081 Received request from IP:" + request.connection.remoteAddress + " Hostname: " + os.hostname());
   response.writeHead(200);
-  response.end("You've hit " + os.hostname() + "\n");
+  response.end("Kubia:v2-8081 You've hit " + os.hostname() + "\n");
 };
 
 var www = http.createServer(handler);
-www.listen(8080);
+www.listen(8081);
 

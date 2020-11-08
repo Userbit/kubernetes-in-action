@@ -4,6 +4,7 @@ metadata:
   name: kubia-loadbalancer
 spec:
   type: LoadBalancer
+  externalTrafficPolicy: Local
   ports:
   - port: 80
     targetPort: 8080

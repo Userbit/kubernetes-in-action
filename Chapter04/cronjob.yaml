@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: batch-job-every-fifteen-minutes
 spec:
-  schedule: "0,15,30,45 * * * *"
+  schedule: "48,49,50,51 * * * *"
   jobTemplate:
     spec:
       template:
